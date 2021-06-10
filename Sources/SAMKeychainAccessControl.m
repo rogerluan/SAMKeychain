@@ -21,10 +21,8 @@
 
 CFTypeRef getSecAttrAccessibility(SAMKeychainAccessibility ssAttr) {
 	switch (ssAttr) {
-		case SAMKeychainAccessibilityAlways: return kSecAttrAccessibleAlways;
 		case SAMKeychainAccessibilityWhenUnlocked: return kSecAttrAccessibleWhenUnlocked;
 		case SAMKeychainAccessibilityAfterFirstUnlock: return kSecAttrAccessibleAfterFirstUnlock;
-		case SAMKeychainAccessibilityAlwaysThisDeviceOnly: return kSecAttrAccessibleAlwaysThisDeviceOnly;
 		case SAMKeychainAccessibilityWhenUnlockedThisDeviceOnly: return kSecAttrAccessibleWhenUnlockedThisDeviceOnly;
 		case SAMKeychainAccessibilityWhenPasscodeSetThisDeviceOnly: return kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly;
 		case SAMKeychainAccessibilityAfterFirstUnlockThisDeviceOnly: return kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly;

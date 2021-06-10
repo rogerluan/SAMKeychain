@@ -382,47 +382,48 @@
 	NSString *message = nil;
 	switch (code) {
 		case errSecSuccess: return nil;
-		case SAMKeychainErrorBadArguments: message = NSLocalizedStringFromTableInBundle(@"SAMKeychainErrorBadArguments", @"SAMKeychain", resourcesBundle, nil); break;
-
+		case SAMKeychainErrorBadArguments:
+			message = NSLocalizedString(@"Some of the arguments were invalid", nil);
+			break;
 #if TARGET_OS_IPHONE
 		case errSecUnimplemented: {
-			message = NSLocalizedStringFromTableInBundle(@"errSecUnimplemented", @"SAMKeychain", resourcesBundle, nil);
+			message = NSLocalizedString(@"Function or operation not implemented", nil);
 			break;
 		}
 		case errSecParam: {
-			message = NSLocalizedStringFromTableInBundle(@"errSecParam", @"SAMKeychain", resourcesBundle, nil);
+			message = NSLocalizedString(@"One or more parameters passed to a function were not valid", nil);
 			break;
 		}
 		case errSecAllocate: {
-			message = NSLocalizedStringFromTableInBundle(@"errSecAllocate", @"SAMKeychain", resourcesBundle, nil);
+			message = NSLocalizedString(@"Failed to allocate memory", nil);
 			break;
 		}
 		case errSecNotAvailable: {
-			message = NSLocalizedStringFromTableInBundle(@"errSecNotAvailable", @"SAMKeychain", resourcesBundle, nil);
+			message = NSLocalizedString(@"No keychain is available. You may need to restart your computer", nil);
 			break;
 		}
 		case errSecDuplicateItem: {
-			message = NSLocalizedStringFromTableInBundle(@"errSecDuplicateItem", @"SAMKeychain", resourcesBundle, nil);
+			message = NSLocalizedString(@"The specified item already exists in the keychain", nil);
 			break;
 		}
 		case errSecItemNotFound: {
-			message = NSLocalizedStringFromTableInBundle(@"errSecItemNotFound", @"SAMKeychain", resourcesBundle, nil);
+			message = NSLocalizedString(@"The specified item could not be found in the keychain", nil);
 			break;
 		}
 		case errSecInteractionNotAllowed: {
-			message = NSLocalizedStringFromTableInBundle(@"errSecInteractionNotAllowed", @"SAMKeychain", resourcesBundle, nil);
+			message = NSLocalizedString(@"User interaction is not allowed", nil);
 			break;
 		}
 		case errSecDecode: {
-			message = NSLocalizedStringFromTableInBundle(@"errSecDecode", @"SAMKeychain", resourcesBundle, nil);
+			message = NSLocalizedString(@"Unable to decode the provided data", nil);
 			break;
 		}
 		case errSecAuthFailed: {
-			message = NSLocalizedStringFromTableInBundle(@"errSecAuthFailed", @"SAMKeychain", resourcesBundle, nil);
+			message = NSLocalizedString(@"The user name or passphrase you entered is not correct", nil);
 			break;
 		}
 		default: {
-			message = NSLocalizedStringFromTableInBundle(@"errSecDefault", @"SAMKeychain", resourcesBundle, nil);
+			message = NSLocalizedString(@"Refer to SecBase.h for description", nil);
 		}
 #else
 		default:

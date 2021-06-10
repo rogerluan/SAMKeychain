@@ -19,7 +19,7 @@
 #endif
 
 #ifdef SAMKEYCHAIN_ACCESS_CONTROL_AVAILABLE
-	#import <SAMKeychain/SAMKeychainAccessControl.h>
+	#import "SAMKeychainAccessControl.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
